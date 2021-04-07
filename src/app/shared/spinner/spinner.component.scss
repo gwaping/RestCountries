@@ -1,0 +1,19 @@
+.spinner-container {
+
+    .progress-spinner {
+        display: block;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto
+    }
+    
+    .loading-message {
+        margin-top: 30px;
+    }
+
+   ::ng-deep .mat-progress-spinner circle,
+    .mat-spinner circle {
+        stroke: var(--spinner-color) !important;
+    }
+
+}

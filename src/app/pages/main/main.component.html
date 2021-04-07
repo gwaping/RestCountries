@@ -1,0 +1,45 @@
+
+<div class="main-container">
+
+    <div *ngIf="loadingDone; else showSpinner">
+    
+        <div class="filters-container row" [ngClass]="setThemeColor()">
+
+            <div class="col-sm-12 col-md-6">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" [(ngModel)]="searchedCountry" (ngModelChange)="onChangeSearch()" placeholder="Search for a country...">
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <select class="form-control input-lg" (change)="onChangeRegion($event)" placeholder="Filter By Region" >
+                    <option selected disabled>Filter by Region</option>  
+                    <option *ngFor="let region of regionList" value="region">{{ region | titlecase }} </option>
+                  </select>
+                </div>
+            </div>
+
+        </div>
+    
+        <div class="country-summary-list-container row">
+
+            <div *ngFor="let country of filteredCountriesList" class="col-sm-12 col-md-4 col-lg-3">
+                <app-country-summary [country]="country"></app-country-summary>
+            </div>
+    
+        </div>
+
+    </div>    
+
+
+    <ng-template #showSpinner>
+        <app-spinner></app-spinner>
+    </ng-template>
+
+    
+
+</div>
+
+

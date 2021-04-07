@@ -1,0 +1,38 @@
+<!-- <p>country-summary works!</p>-->
+
+<!-- <div class="country-summary-container">
+
+    
+
+</div> -->
+
+<div class="card-container" [ngClass]="setThemeColor()" (click)="goToCountryDetail()" >
+    <mat-card class="mat-elevation-z2">
+
+        <img class="flag-image" mat-card-image src="{{ country.flag }}" >
+
+         <mat-card-content>
+             <div class="country-name">
+                {{ country.name }}
+             </div>
+       
+             <div class="summary-details">
+                <div>
+                   <label>Population: </label>{{ country.population | number }}
+                </div>
+                <div>
+                   <label>Region: </label>{{ country.region }}
+                </div>
+                <div>
+                   <label>Capital:</label>{{ country.capital }}
+                </div>
+       
+             </div>
+       
+         </mat-card-content>
+       
+       </mat-card>
+       
+
+</div>
+

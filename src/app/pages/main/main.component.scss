@@ -1,0 +1,130 @@
+
+// .light-theme {
+//     --color-primary: #FFFFFF;
+//     --color-secondary: #FAFAFA;
+//     --font-color: #000000;
+// }
+
+// .dark-theme {
+
+//     --color-primary: #3D4E5F;
+//     --color-secondary: #202D36;
+//     --font-color: #ffffff;
+
+// }
+
+
+.main-container {
+
+    .filters-container {
+        
+        margin: 50px;
+        // margin-top: 30px;
+
+        .input-group, .form-group {
+
+            padding: 10px;
+            border-radius: 5px;
+
+            background-color: var(--color-primary);
+            color: var(--font-color);
+            box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%), 0 1px 10px 0 rgb(0 0 0 / 5%);
+
+            ::placeholder {
+                color: var(--font-color);
+                opacity: 1;
+            }
+
+        }
+
+        .input-group {
+            width: 450px;
+        }
+
+        .form-group {
+            width: 300px;
+            float: right;
+        }
+
+        input, select {
+
+            border: none;
+            background-color: var(--color-primary);
+            color: var(--font-color);
+        }
+
+    }
+
+    .country-summary-list-container {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+}
+
+@media only screen and ( orientation : portrait ) {
+  
+    @media only screen and (max-width : 414px) {
+
+        mat-toolbar {
+            font-size: 12px;
+        }
+
+        .filters-container {
+            padding: 0px;
+            margin: 10px !important;
+
+            .input-group, .form-group {
+                margin: 10px;
+            }
+
+            .input-group {
+                width: 95% !important;
+            }
+    
+            .form-group {
+                width: 300px;
+                float: left !important;
+            }
+
+        }
+
+        app-country-summary {
+            margin : auto;
+        }
+
+    }
+  
+} 
+
+
+@media only screen and (orientation : landscape ) {
+
+
+    @media only screen and (max-width : 1920px)  {
+    
+        .country-summary-list-container {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+    }
+
+    @media only screen and (max-width : 1440px)  {
+    
+        .country-summary-list-container {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        
+
+    }
+    @media only screen and (max-width : 1024px) {
+    }
+    @media only screen and (max-width : 812px) {
+    }
+
+} // landscape
+
+
+

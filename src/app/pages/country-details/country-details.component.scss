@@ -1,0 +1,91 @@
+
+
+
+
+.button-container {
+    margin: 60px;
+
+    .btn {
+        background-color: var(--color-primary);
+        color: var(--font-color);
+        width : 120px;
+        box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%), 0 1px 10px 0 rgb(0 0 0 / 5%);
+    }
+}
+
+.flag-container {
+    text-align:  center;
+    
+    .flag-image {
+        width: 350px;
+    }
+
+    // margin: 20px;
+}
+
+
+.details-container {
+    // margin : 50px;
+
+    .country-name {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+
+    .country-info, .country-borders {
+
+        font-size: 12px;
+
+        label {
+            font-weight: 600;
+        }
+
+        .btn {
+            background-color: var(--color-primary);
+            color: var(--font-color);
+            box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%), 0 1px 10px 0 rgb(0 0 0 / 5%);
+        }
+
+        margin-bottom: 50px;
+
+
+    }
+
+}
+
+@media only screen and ( orientation : portrait ) {
+  
+    @media only screen and (max-width : 414px) {
+
+       
+        .button-container {
+            margin: 40px;
+        
+            .btn {
+                width : 120px;
+            }
+        }
+
+        .flag-container, .details-container {
+           margin : auto;
+
+           .flag-image {
+               width: 330px;
+               height: 220px;
+           }
+        }
+
+        .group1 {
+            margin-bottom: 30px;
+        }
+        
+        .details-container {
+            margin: 20px;
+        }
+     
+
+    }
+   
+} 

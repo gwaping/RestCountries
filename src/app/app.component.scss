@@ -1,0 +1,109 @@
+html .body {
+    max-width: 100%;
+    height: 100%;
+    font-family: Nuni
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+
+.dark-mode-toggler {
+    :hover {
+        cursor: pointer;
+    }
+}
+
+// .light-theme {
+
+//     --color-primary: #FFFFFF;
+//     --color-secondary: #FAFAFA;
+//     --font-color: #000000;
+//     --line-color: #E6E6E6;
+
+// }
+
+// .dark-theme {
+
+//     --color-primary: #3D4E5F;
+//     --color-secondary: #202D36;
+//     --font-color: #ffffff;
+//     --line-color: #1D2A33;
+
+// }
+
+.toolbar {
+    background-color: var(--color-primary);    
+    color: var(--font-color);
+    // box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 1px 20px 0 rgb(0 0 0 / 20%);
+}
+
+.line-divider {
+    height: 2px !important;
+    background-color: var(--line-color);    
+}
+
+
+.content-container {
+   height: 90%; 
+   background-color: var(--color-secondary);
+   color: var(--font-color);
+
+   overflow : auto;
+}
+
+
+@media only screen and ( orientation : portrait ) {
+  
+    @media only screen and (max-width : 414px) {
+
+       .header-name {
+           font-size: 12px;
+           font-weight: 600;
+       }
+
+       .dark-mode-toggler {
+           font-size: 12px;
+           font-weight: 300;
+       }
+        
+
+    }
+  
+} 
+
+
+@media only screen and (orientation : landscape ) {
+
+
+    @media only screen and (max-width : 1920px)  {
+    
+        .header-name {
+           margin-left: 50px;
+        }
+
+        .dark-mode-toggler {
+            margin-right: 50px;
+        }
+
+    }
+
+    @media only screen and (max-width : 1440px)  {
+    
+        .header-name {
+            margin-left: 50px;
+         }
+ 
+         .dark-mode-toggler {
+             margin-right: 50px;
+         }
+        
+
+    }
+    @media only screen and (max-width : 1024px) {
+    }
+    @media only screen and (max-width : 812px) {
+    }
+
+} // landscape

@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.light-theme {
+
+    // --color-primary: #FFFFFF;
+    // --color-secondary: #FAFAFA;
+    // --font-color: #000000;
+    // --line-color: #858585;
+
+    --color-primary:  hsl(0, 0%, 100%);
+    --color-secondary:  hsl(0, 0%, 98%);
+    --font-color: #000000;
+    --line-color: hsl(0, 0%, 90%);
+    --spinner-color: hsl(209, 26%, 17%);
+
+}
+
+.dark-theme {
+
+    --color-primary: hsl(208, 23%, 22%);
+    --color-secondary: hsl(209, 26%, 17%);
+    --font-color: hsl(0, 0%, 100%);
+    --line-color: #111517;
+    --spinner-color: hsl(200, 2%, 36%);
+
+}
+

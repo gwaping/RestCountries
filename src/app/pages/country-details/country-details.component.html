@@ -1,0 +1,83 @@
+<div class="country-container">
+
+
+    <div class="button-container justify-content-start row">
+        <button class="btn" [ngClass]="setThemeColor()" (click)="onBackClicked()"><i class="fa fa-long-arrow-left"></i>&nbsp;&nbsp;&nbsp;Back</button>
+    </div>
+
+
+    <div *ngIf="loadingDone; else showSpinner" class="row">
+
+        <div class="flag-container col-sm-12 col-md-6 col-lg-6" style="border: 1px solid red;">
+            <img class="flag-image" mat-card-image src="{{ countryInfo.flag }}" >
+        </div>
+
+
+        <div class="details-container col-sm-12 col-md-6 col-lg-6" style="border: 1px solid red;">
+
+            <div class="row">
+
+                <div class="country-name">
+                    {{ countryInfo.name }}
+                </div>
+    
+                <div class="country-info row">
+    
+                    <div class="group1 col-sm-12 col-md-6 col-lg-6">
+                        <div>
+                            <label>Native Name:</label> {{ countryInfo.nativeName}}
+                        </div>
+                        <div>
+                            <label>Population:</label> {{ countryInfo.population | number }}
+                        </div>
+                        <div>
+                            <label>Region:</label> {{ countryInfo.region}}
+                        </div>
+                        <div>
+                            <label>Sub Region:</label> {{ countryInfo.subregion}}
+                        </div>
+                        <div>
+                            <label>Capital:</label> {{ countryInfo.capital}}
+                        </div>
+    
+                    </div>
+    
+                    <div class="group2 col-sm-12 col-md-6 col-lg-6">
+                        <div>
+                            <label>Top Level Domain:</label> {{ countryInfo.topLevelDomain}}
+                        </div>
+                        <div>
+                            <label>Currencies:</label> {{ countryInfo.currencies}}
+                        </div>
+                        <div>
+                            <label>Languages:</label> {{ countryInfo.languages}}
+                        </div>
+    
+                    </div>
+    
+    
+                </div>
+    
+                <div class="country-borders row d-flex">
+                    <label class="col-sm-12">Border Countries:</label>
+
+                        <div *ngFor="let bc of countryInfo.borders;"  >
+                            <button class="btn" (click)="goToCountryDetail(bc)" style="margin: 5px; font-size: 12px;" > {{ bc }} </button>
+                        </div>
+                   
+    
+                </div>
+
+            </div>
+
+           
+        </div>
+
+    </div>
+
+    <ng-template #showSpinner>
+        <app-spinner></app-spinner>
+    </ng-template>
+
+
+</div>
