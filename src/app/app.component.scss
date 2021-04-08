@@ -1,11 +1,16 @@
-html .body {
-    max-width: 100%;
-    height: 100%;
-    font-family: Nuni
-}
+// html .body {
+//     max-width: 100%;
+//     height: 100%;
+// }
 
 .spacer {
     flex: 1 1 auto;
+}
+
+
+.header-name {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 
@@ -13,6 +18,9 @@ html .body {
     :hover {
         cursor: pointer;
     }
+
+    font-size: 14px;
+    font-weight: 400;
 }
 
 // .light-theme {
@@ -36,6 +44,7 @@ html .body {
 .toolbar {
     background-color: var(--color-primary);    
     color: var(--font-color);
+    font-family: 'Nunito Sans';
     // box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 1px 20px 0 rgb(0 0 0 / 20%);
 }
 
@@ -81,6 +90,7 @@ html .body {
     
         .header-name {
            margin-left: 50px;
+           font-weight: 600;
         }
 
         .dark-mode-toggler {

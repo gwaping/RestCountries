@@ -9,6 +9,8 @@ import { AppService } from './services/app.service';
 export class AppComponent implements OnInit {
   title = 'rest-countries';
 
+  modeStr = "Dark Mode";
+
   constructor( private appService : AppService  ) {
 
   } 
@@ -21,9 +23,11 @@ export class AppComponent implements OnInit {
 
     if (sessionStorage.getItem('MODE') == 'LIGHT') {
       sessionStorage.setItem('MODE', 'DARK');
+      this.modeStr = "Light Mode";
     }
     else {
       sessionStorage.setItem('MODE', 'LIGHT');
+      this.modeStr = "Dark Mode";
     }
   
   }

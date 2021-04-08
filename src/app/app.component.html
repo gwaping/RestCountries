@@ -3,10 +3,9 @@
   <mat-toolbar class="toolbar" [ngClass]="setThemeColor()">
     <span class="header-name">Where in the world?</span>
     <span class="spacer"></span>
-    <span>
-      <div class="dark-mode-toggler" (click)="toggleDarkmode()" >
-        <i class="fa fa-moon-o" aria-hidden="true"></i> Dark Mode
-      </div>
+    <span class="dark-mode-toggler">
+      <div (click)="toggleDarkmode()" >
+        <i class="fa" [ngClass]="modeStr == 'Dark Mode' ? 'fa-moon-o' : 'fa-sun-o'"  aria-hidden="true"></i> {{ modeStr }} </div>
     </span>
   
   </mat-toolbar>

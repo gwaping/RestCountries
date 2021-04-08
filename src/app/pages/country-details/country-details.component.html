@@ -8,16 +8,16 @@
 
     <div *ngIf="loadingDone; else showSpinner" class="row">
 
-        <div class="flag-container col-sm-12 col-md-6 col-lg-6" style="border: 1px solid red;">
+        <div class="flag-container col-sm-12 col-md-6 col-lg-6">
             <img class="flag-image" mat-card-image src="{{ countryInfo.flag }}" >
         </div>
 
 
-        <div class="details-container col-sm-12 col-md-6 col-lg-6" style="border: 1px solid red;">
+        <div class="details-container col-sm-12 col-md-6 col-lg-6">
 
-            <div class="row">
+            <div class="main-info">
 
-                <div class="country-name">
+                <div class="country-name row">
                     {{ countryInfo.name }}
                 </div>
     
@@ -59,12 +59,18 @@
                 </div>
     
                 <div class="country-borders row d-flex">
-                    <label class="col-sm-12">Border Countries:</label>
+                    <label>Border Countries:</label>
 
+                    <div *ngIf="countryInfo.borders.length > 0; else noBorders" class="border-countries-group d-flex">
                         <div *ngFor="let bc of countryInfo.borders;"  >
                             <button class="btn" (click)="goToCountryDetail(bc)" style="margin: 5px; font-size: 12px;" > {{ bc }} </button>
                         </div>
-                   
+                    </div>
+
+                    <ng-template #noBorders>
+                        <div class="border-countries-group d-flex">&nbsp;&nbsp;NONE</div>
+                        
+                    </ng-template>
     
                 </div>
 

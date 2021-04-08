@@ -17,7 +17,7 @@
     text-align:  center;
     
     .flag-image {
-        width: 350px;
+        width: 70%;
     }
 
     // margin: 20px;
@@ -48,15 +48,42 @@
             box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%), 0 1px 10px 0 rgb(0 0 0 / 5%);
         }
 
+
+        .group1, .group2 {
+            padding: 0px;
+        }
+     
         margin-bottom: 50px;
+
+    }
+
+    .country-borders {
+        align-items: baseline;
+
+        .border-countries-group {
+            flex-wrap: wrap;
+        }
 
 
     }
 
+
 }
 
 @media only screen and ( orientation : portrait ) {
-  
+
+    @media only screen and (max-width : 768px) {
+
+        .main-info {
+            padding: 30px;
+
+            .group1 {
+                margin-bottom: 30px;
+            }
+            
+        }
+
+    }
     @media only screen and (max-width : 414px) {
 
        

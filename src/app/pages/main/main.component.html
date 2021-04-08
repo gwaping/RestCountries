@@ -14,9 +14,9 @@
 
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
-                    <select class="form-control input-lg" (change)="onChangeRegion($event)" placeholder="Filter By Region" >
+                    <select class="form-control input-lg" (change)="onChangeRegion($event)" >
                     <option selected disabled>Filter by Region</option>  
-                    <option *ngFor="let region of regionList" value="region">{{ region | titlecase }} </option>
+                    <option *ngFor="let region of regionList" value="region" >{{ region | titlecase }} </option>
                   </select>
                 </div>
             </div>
